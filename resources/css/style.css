@@ -15,7 +15,7 @@ p {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
 }
 
 h3 {
@@ -146,5 +146,11 @@ nav a {
 .about h2, .about h5, .about p {
     width: 100%;
     text-align: left;
+}
+
+.about .info-side {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
 }
 
