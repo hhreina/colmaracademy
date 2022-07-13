@@ -10,6 +10,18 @@ body {
     text-align: center;
 }
 
+p {
+    font-size 1.2rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
 .secondary-color {
     color: #2568FB;
 }
@@ -63,6 +75,7 @@ nav {
 nav a {
     
     padding-left: 16px;
+    font-weight: 600;
     color: #5c6d91;
     text-decoration: none;
 }
@@ -74,9 +87,7 @@ nav a {
     display: relative;
     padding-top: 65px;
     margin: 0 auto;
-    width: 100%;
-    background-color:#FECD45;
-   
+    width: 100%;  
 }
 
 .banner {
@@ -84,6 +95,7 @@ nav a {
     flex-direction: row;
     width: 100%;
     padding: 32px 24px;
+    background-color:#FECD45;
 }
 
 .banner img {
@@ -99,13 +111,6 @@ nav a {
     padding-left: 24px;
 }
 
-.banner-text h2 {
-    font-size: 2.5rem;
-}
-
-.banner-text h3 {
-    font-size: 1.6rem;
-}
 
 .banner .banner-text button {
     background-color: #242020;
@@ -114,5 +119,32 @@ nav a {
     width: 90%;
     padding-top: 8px;
     padding-bottom: 8px;
+}
+
+/** Styling for About section **/
+
+.about {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 32px 24px;
+    background-color: white;
+}
+
+.about .info-main {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.about img {
+    width: 100%;
+}
+
+.about h2, .about h5, .about p {
+    width: 100%;
+    text-align: left;
 }
 
