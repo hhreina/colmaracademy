@@ -6,7 +6,7 @@ html {
 body {
     width: 100%;
     background-color: white;
-    color: black;
+    color: #242020;
     text-align: center;
 }
 
@@ -76,5 +76,43 @@ nav a {
     margin: 0 auto;
     width: 100%;
     background-color:#FECD45;
+   
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 32px 24px;
+}
+
+.banner img {
+    width: 60%;
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    padding-left: 24px;
+}
+
+.banner-text h2 {
+    font-size: 2.5rem;
+}
+
+.banner-text h3 {
+    font-size: 1.6rem;
+}
+
+.banner .banner-text button {
+    background-color: #242020;
+    font-size: 1.5rem;
+    color: white;
+    width: 90%;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
