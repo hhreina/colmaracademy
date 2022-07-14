@@ -1,5 +1,5 @@
 html {
-    font-family: "Verdana", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
   }
 
@@ -53,6 +53,7 @@ header {
 #logo {
     display: inline-flex;
     margin-left: 24px;
+    font-family: "Verdana", sans-serif;
     font-size: 1.3rem;
     justify-content: flex-start;
     align-items: center;
@@ -205,16 +206,44 @@ nav a {
 /** Styling for Courses section **/
 
 .courses {
-    display: flex;
+    display: block;
+    width: 100%;
     padding-top: 32px;
     padding-bottom: 32px;
 
 }
 
+.courses h2 {
+    text-align: center;
+}
+
 .courses .coursecards {
-    display: inline-flex;
+    display: flex;
+    width: 100%;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     padding-top: 32px;
-    padding-left: 72px;
+    padding-left: 40px;
     padding-right: 72px;
+}
+
+.courses .coursecards .course-card {
+    display: flex;
+    flex-direction: column;
+    margin-left: 32px;
+    margin-bottom: 32px;
+    max-width: 500px;
+    min-width: 300px;
+    height: 36.25rem;
+    background-color: white;
+}
+
+.course-card img {
+    width: 100%;
+    height: auto;
+}
+
+.course-card .course-text {
+    padding: 16px 16px 24px 16px;
 }
