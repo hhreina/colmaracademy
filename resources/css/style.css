@@ -61,12 +61,12 @@ h5 {
 /** Header styling **/
 
 @media only screen and (min-width: 771px) {
-    header#mobile {
+    div#mobile-header {
       display: none;
     }
 
 
-    header#desktop {
+    div#desktop-header {
         display: flex;
         position: fixed;
         top: 0;
@@ -81,22 +81,34 @@ h5 {
 }
 
 @media only screen and (max-width: 770px) {
-    header#desktop {
+    div#desktop-header  {
       display: none;
     }
 
-    header#mobile {
-    display: flex;
-    position: fixed;
-    top: 0;
-    background-color: white;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 10;
-    width: 100%;
-    height: 64px;
-    border-bottom: 1px solid lightgray;
+    #mobile-header nav {
+        display: inline-flex;
+        min-width: 280px;
+        max-width: 769px;
+        width: 100%;
+        justify-content: space-around;
     }
+
+    #mobile-header nav a {
+        display: inline-flex;
+    }
+
+    div#mobile-header {
+        display: flex;
+        position: fixed;
+        top: 0;
+        background-color: white;
+        align-items: center;
+        z-index: 10;
+        width: 100%;
+        height: 64px;
+        border-bottom: 1px solid lightgray;
+    }
+
 }
 
 #logo {
