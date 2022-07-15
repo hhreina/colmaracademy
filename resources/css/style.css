@@ -46,7 +46,7 @@ h5 {
 
 /** Header styling **/
 
-header {
+header .desktop {
     display: flex;
     position: fixed;
     top: 0;
@@ -95,6 +95,18 @@ nav a {
     font-weight: 600;
     color: #4769b2;
     text-decoration: none;
+}
+
+@media screen and (min-width: 771px) {
+    header .mobile {
+      display: none;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    header .desktop {
+      display: none;
+    }
 }
 
 .center {
