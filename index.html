@@ -6,12 +6,15 @@
         <title>Colmar Academy</title>
         <meta name="description" content="Learn sometething new everyday>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+        <link rel="icon" href="./favicon.ico" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./resources/css/style.css">
     </head>
     <body>
+    <div class="main">
         <header>
             <div id="logo">
                 <img src="./resources/images/ic-logo.svg" alt="Colmar Academy logo">
@@ -28,7 +31,9 @@
         </header>
         <div class="container">            
             <div class="banner">
-                <img src="./resources/images/banner.jpg" alt="Students at picnic table">
+                <div class="banner-img">
+                    <img src="./resources/images/banner.jpg" alt="Students at picnic table">
+                </div>
                 <div class="banner-text">
                     <h2>Learn something new everyday</h2>
                     <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </h3>
@@ -167,7 +172,7 @@
             </div>
             <footer>
                 <div class="copyright">
-                    <p>©2022 Colmar Academy.  All rights reserved</p>
+                    <span>©2022 Colmar Academy.  All rights reserved</span>
                 </div>
                 <div class="footer-navbar">
                     <nav>
@@ -176,6 +181,7 @@
                     </nav>
                 </div>
             </footer>
-        </div>              
+        </div>
+    </div>              
     </body>
 </html>
