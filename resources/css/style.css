@@ -57,6 +57,9 @@ h5 {
     color: #2568FB;
 }
 
+.color-swap {
+    background-color: #FECD45;
+}
 
 /** Header styling **/
 
@@ -79,6 +82,8 @@ h5 {
         border-bottom: 1px solid lightgray;
     }
 }
+
+
 
 @media only screen and (max-width: 770px) {
     div#desktop-header  {
@@ -283,8 +288,7 @@ nav a {
 .infocard {
     display: flex;
     flex-direction: row;
-    width: 96.6%;
-    padding-left: 16px;
+    width: 100%;
     padding-right: 24px;
     border-bottom: 1px solid lightgray 
 }
@@ -293,19 +297,19 @@ nav a {
     display: inline-flex;
     width: 35%;
     height: auto;
-    padding: 16px;
+    margin: 16px;
 }
 
 #orientation-img {
-    background-image: url("resources/images/information-orientation.jpg");
+    background-image: url("/resources/images/information-orientation.jpg");
 }
 
 #campus-img {
-    background-image: url("resources/images/information-campus.jpg");
+    background-image: url("/resources/images/information-campus.jpg");
 }
 
 #guest-img {
-    background-image: url("resources/images/information-guest-lecture.jpg");
+    background-image: url("/resources/images/information-guest-lecture.jpg");
 }
 
 .info-details {
@@ -313,7 +317,6 @@ nav a {
     flex-direction: column;
     justify-content: start;
     width: 65%;
-    padding-left: 24px;
     margin: auto 0; 
     line-height: 8px;
     overflow: hidden;  
@@ -344,29 +347,47 @@ nav a {
     }
     
     .infocard {
-        flex-direction: row;
-        width: 96.6%;
-        padding-left: 16px;
-        padding-right: 24px;
-        border-bottom: 1px solid lightgray 
+        flex-direction: column;
     }
     
     .infocard img {
-        display: inline-flex;
-        width: 35%;
+        display: flex;
+        width: 100%;
         height: auto;
         padding: 16px;
     }
     
-    .info-details {
+    #orientation-img, #campus-img, #guest-img {
         display: inline-flex;
+        width: 35%;
+        height: auto;
+        margin: 16px;
+    }
+    
+    #orientation-img {
+        background-image: url("/resources/images/information-orientation-mobile.jpg");
+    }
+    
+    #campus-img {
+        background-image: url("/resources/images/information-campus-mobile.jpg");
+    }
+    
+    #guest-img {
+        background-image: url("/resources/images/information-guest-lecture-mobile.jpg");
+    }
+
+    .info-details {
+        display: flex;
         flex-direction: column;
         justify-content: start;
-        width: 65%;
-        padding-left: 24px;
-        margin: auto 0; 
-        line-height: 8px;
-        overflow: hidden;  
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px; 
+        line-height: 8px; 
+    }
+
+    .infocard .color-swap {
+        background-color: white;
     }
     
 }
@@ -420,7 +441,7 @@ nav a {
 
 .thesis {
     display: block;
-    width: 98.6fr;
+    width: 98.6%;
     padding-top: 32px;
     padding-left: 24px;
     margin-bottom: 32px;
@@ -492,7 +513,7 @@ footer {
     display: inline-flex;
     padding: 16px 24px 32px 24px;
     width: 96.6%;
-    align-items: top;
+    align-items: flex-start;
 }
 
 footer span {
