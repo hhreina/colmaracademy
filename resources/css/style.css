@@ -39,11 +39,13 @@ p {
 }
 
 h2 {
-    font-size: 3.5rem;
+    /** font-size: 3.5rem; **/
+    font-size: clamp(2.5rem, 3vw + 1.5rem, 5rem);
 }
 
 h3 {
-    font-size: 2.0rem;
+    /** font-size: 2.0rem; **/
+    font-size: clamp(1.5rem, 1.5vw + 1.5rem, 2.5rem);
 }
 
 h5 {
@@ -86,23 +88,11 @@ h5 {
 
 
 @media only screen and (max-width: 770px) {
-    div#desktop-header  {
+    #desktop-header  {
       display: none;
     }
 
-    #mobile-header nav {
-        display: inline-flex;
-        min-width: 280px;
-        max-width: 769px;
-        width: 100%;
-        justify-content: space-around;
-    }
-
-    #mobile-header nav a {
-        display: inline-flex;
-    }
-
-    div#mobile-header {
+    #mobile-header {
         display: flex;
         position: fixed;
         top: 0;
@@ -115,6 +105,19 @@ h5 {
         padding-right: 24px;
         border-bottom: 1px solid lightgray;
     }
+
+    #mobile-header nav {
+        display: inline-flex;
+        min-width: 280px;
+        max-width: 769px;
+        width: 80%;
+        justify-content: space-between;
+    }
+
+    #mobile-header nav a {
+        display: inline-flex;
+    }
+ 
 
 }
 
@@ -341,7 +344,8 @@ nav a {
     
     
     .about .info-side {
-        flex: 0 1 100%;
+        display: flex;
+        width: 100%;
         flex-direction: column;
         border: none;
     }
@@ -350,17 +354,12 @@ nav a {
         flex-direction: column;
     }
     
-    .infocard img {
-        display: flex;
-        width: 100%;
-        height: auto;
-        padding: 16px;
-    }
-    
+   
     #orientation-img, #campus-img, #guest-img {
-        display: inline-flex;
-        width: 35%;
-        height: auto;
+        display: block;
+        width: 100%;
+        min-height: auto;
+        height: 272px;
         margin: 16px;
     }
     
@@ -386,7 +385,7 @@ nav a {
         line-height: 8px; 
     }
 
-    .infocard .color-swap {
+    .color-swap {
         background-color: white;
     }
     
@@ -406,7 +405,7 @@ nav a {
     text-align: center;
 }
 
-.courses .coursecards {
+#coursecards {
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -417,7 +416,7 @@ nav a {
     padding-right: 72px;
 }
 
-.courses .coursecards .course-card {
+#coursecards .course-card {
     display: flex;
     flex-direction: column;
     margin-left: 32px;
@@ -435,6 +434,36 @@ nav a {
 
 .course-card .course-text {
     padding: 16px 16px 24px 16px;
+}
+
+@media only screen and (min-width: 771px) {
+    .courses {
+        background-color:#FECD45;
+    }
+
+    #course-titles {
+        display: none;
+    }   
+
+}
+
+@media only screen and (max-width: 770px) {
+    #coursecards {
+        display: none;
+    }
+
+    #course-titles {
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    #course-titles h3 {
+        font-size: clamp(1.3rem, 1vw + 1rem, 1.5rem);
+        background-color:#FECD45;
+        margin-bottom: 8px;
+        padding: 16px 16px 24px 16px;
+    }
 }
 
 /** Styling for Thesis Exhibit **/
@@ -475,14 +504,14 @@ nav a {
     margin-top: 8px;
 }
 
-.thesis .exhibit-cards{
+#exhibit-cards{
     display: flex;
     flex-direction: column;
     margin-bottom: 24px;
     width: 40%;
 }
 
-.exhibit-cards .thesis-card {
+#exhibit-cards .thesis-card {
     display: flex;
     flex-direction: row;
     width: 98.7%;
@@ -507,6 +536,40 @@ nav a {
     margin-bottom: 0;
 }
 
+
+
+@media only screen and (max-width: 770px) {
+    #exhibit-cards {
+        display: none;
+    }
+
+    .exhibits {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .thesis .exhibit-video {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .thesis .exhibit-video video {
+        width: 100%;
+        height: auto;
+    }
+    
+    .exhibit-video h3 {
+        display: none;
+    }
+
+    .exhibit-video p {
+        display: none;
+    }
+}
+
+
 /** Styling for Footer **/
 
 footer {
@@ -528,4 +591,14 @@ footer .footer-navbar {
     padding-right: 24px;;
     font-size: 1.2rem;
 
+}
+
+@media only screen and (max-width: 770px) {
+    footer .footer-navbar {
+        display: none;
+    }
+
+    footer span {
+        font-size: .75rem;
+    }
 }
