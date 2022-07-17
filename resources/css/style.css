@@ -38,14 +38,19 @@ p {
     line-height: 2.1rem;
 }
 
+h1 {
+    /** font-size: 3.5rem; **/
+    font-size: clamp(3rem, 3vw + 1.5rem, 3.5rem);
+}
+
 h2 {
     /** font-size: 3.5rem; **/
-    font-size: clamp(2.5rem, 3vw + 1.5rem, 5rem);
+    font-size: clamp(2.5rem, 3vw + 1.5rem, 3rem);
 }
 
 h3 {
     /** font-size: 2.0rem; **/
-    font-size: clamp(1.5rem, 1.5vw + 1.5rem, 2.5rem);
+    font-size: clamp(1.5rem, 1.5vw + 1.25rem, 2.0rem);
 }
 
 h5 {
@@ -117,7 +122,16 @@ h5 {
     #mobile-header nav a {
         display: inline-flex;
     }
- 
+    
+    @media only screen and (max-width: 420px) {
+        #mobile-header nav {
+            display: inline-flex;
+            min-width: 280px;
+            max-width: 400px;
+            width: 75%;
+            justify-content: space-between;
+        }
+    }
 
 }
 
@@ -248,6 +262,11 @@ nav a {
         padding-bottom: 32px;        
     }
 
+    .banner-text h1 {
+        text-align: left;
+        font-size: clamp(2.0rem, 3vw + 1.5rem, 2.5rem);
+    }
+
 }
 
 /** Styling for About section **/
@@ -297,32 +316,34 @@ nav a {
 }
 
 #orientation-img, #campus-img, #guest-img {
-    display: inline-flex;
-    width: 35%;
+    display: flex;
+    flex-direction: column;
+    /* align-self: flex-start; */
+    width: 34%;
     height: auto;
     margin: 16px;
 }
 
 #orientation-img {
-    background-image: url("https://hhreina.github.io/colmaracademy/resources/images/information-orientation.jpg");
+    background-image: url("../images/information-orientation.jpg");
 }
 
 #campus-img {
-    background-image: url("https://hhreina.github.io/colmaracademy/resources/images/information-campus.jpg");
+    background-image: url("../images/information-campus.jpg");
 }
 
 #guest-img {
-    background-image: url("https://hhreina.github.io/colmaracademy/resources/images/information-guest-lecture.jpg");
+    background-image: url("../images/information-guest-lecture.jpg");
 }
 
 .info-details {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     justify-content: start;
     width: 65%;
-    margin: auto 0; 
+    margin: auto 0;
     line-height: 8px;
-    overflow: hidden;  
+    overflow: hidden;
 }
 
 .info-details p{
@@ -364,15 +385,15 @@ nav a {
     }
     
     #orientation-img {
-        background-image: url("https://hhreina.github.io/colmaracademy/resources/images/information-orientation-mobile.jpg");
+        background-image: url("../images/information-orientation-mobile.jpg");
     }
     
     #campus-img {
-        background-image: url("https://hhreina.github.io/colmaracademy/resources/images/information-campus-mobile.jpg");
+        background-image: url("../images/information-campus-mobile.jpg");
     }
     
     #guest-img {
-        background-image: url("https://hhreina.github.io/colmaracademy/resources/images/information-guest-lecture-mobile.jpg");
+        background-image: url("../images/information-guest-lecture-mobile.jpg");
     }
 
     .info-details {
@@ -514,9 +535,8 @@ nav a {
 #exhibit-cards .thesis-card {
     display: flex;
     flex-direction: row;
-    width: 98.7%;
     padding: 16px;
-    
+    width: 9;
 }
 
 .thesis-card img {
